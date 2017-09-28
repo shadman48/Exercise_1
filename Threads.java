@@ -14,7 +14,8 @@ public final class Threads {
 
         // Creates a Runnable object that simply increments x then waits a random
         // amount of time up to 1000 milliseconds in a loop.
-        Runnable adder = () -> {
+        Runnable adder = () -> 
+        {
             Random random = new Random();
             while (true) {
                 x++;
