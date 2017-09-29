@@ -19,7 +19,7 @@ public final class EchoClient {
 	        
 	        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	        BufferedReader brIn = new BufferedReader(new InputStreamReader(System.in));
-	        String input = "";
+	        String input;
 	        
 	        System.out.print("Client > ");
         	
@@ -28,7 +28,8 @@ public final class EchoClient {
 	        	out.println(input);
 	        	if(!input.equalsIgnoreCase("exit"))
 	        	{
-	        		System.out.println("Server > " + in.readLine());
+	        		String sin = in.readLine();
+	        		System.out.println("Server > " + sin);
 	        	}
 	        	
 	        	System.out.print("Client > ");
